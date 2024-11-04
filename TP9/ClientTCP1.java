@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class ClientTCP
+public class ClientTCP1
 {
     public static void main(String[] args)
     {
@@ -16,7 +16,7 @@ public class ClientTCP
             // Envoie une chaîne de caractères UTF-8 au serveur
             String message = "Bonjour, serveur !";
             dOut.writeUTF("message test"); // Écrire une chaîne de caractères
-            System.dOut.println("Message envoyé : " + message);
+            System.out.println("Message envoyé : " + message);
 
             dOut.close();
             socket.close();
