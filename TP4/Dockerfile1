@@ -1,0 +1,20 @@
+
+FROM python:3.11
+
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y \
+    
+    python3-pip \
+    default-libmysqlclient-dev && \
+    apt-get clean
+
+
+RUN pip3 install --upgrade pip && \
+    pip3 install flask-mysqldb mysql-connector-python
+
+RUN mkdir /srv/templates 
+
+COPY index.html /srv/templates
+COPY app_1.py /srv/
+
+CMD ["flask","--app","/srv/app1","run","--host=0.0.0.0"]
