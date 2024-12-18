@@ -1,6 +1,7 @@
 
-image="im-tp4"
-docker build -t $image -f Dockerfile1 .
+docker build -t im-tp4 -f dockerfile2 .
+
+
 
 
 

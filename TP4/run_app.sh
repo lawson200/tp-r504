@@ -1,12 +1,9 @@
 
-CONTAINER_NAME="tp4-app"
-IMAGE_NAME="im-tp4"
-NETWORK_NAME="net-tp4"
-HOST_PORT=5000
-CONTAINER_PORT=5000
-
 docker run -d \
-  --name $CONTAINER_NAME \
-  --network $NETWORK_NAME \
-  -p $HOST_PORT:$CONTAINER_PORT \
-  $IMAGE_NAME
+  --name tp4-app \
+  --network net-tp4 \
+  -p 5000:5000 \
+  --mount type=bind,source=$(pwd),target=/srv \
+  im-tp4
+  
+
