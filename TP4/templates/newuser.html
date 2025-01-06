@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+<body>
+    <h1>Inscription</h1>
+    <form action="/newuser/" method="post">
+        <label for="username">Identifiant :</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">S'inscrire</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
+
